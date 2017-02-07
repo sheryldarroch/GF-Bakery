@@ -1,0 +1,491 @@
+/*****************************
+GENERAL
+*****************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'sans-serif';
+}
+
+
+a {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+}
+
+
+
+/*****************************
+COLORS
+*****************************/
+
+h1, h3 {
+  color: #a400ff;
+}
+
+h2 {
+  color: #9D63e8;
+}
+
+.main-nav {
+  background-color: #fff;
+}
+
+body {
+  color: #404040;
+}
+
+.main-content {
+  background-color: #d7cbff;
+}
+
+.main-footer {
+  background-color: #fff;
+  color: #a400ff;
+}
+
+#cupcakes,
+#cookies,
+#bars,
+#cakeballs,
+#tarts,
+#cakes {
+  font-family: 'Kalam', 'cursive';
+  background: #d7cbff;
+  color: #a400ff;  
+} 
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4,
+.menu-5,
+.menu-6 {
+  background-color: #fff;
+  color:  #a400ff;
+}
+
+/*****************************
+HEADING
+*****************************/
+
+.headline {
+  margin: 0;
+  border-bottom: 10px solid #d425e8;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Kalam', 'cursive';
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1em;
+  text-shadow: 0px 4px 4px rgba(212,37,232, .8);
+  margin: 12px 0 0;
+  padding-bottom: 0;
+}
+
+.tagline {
+  font-family: 'Lato', 'sans-serif';
+  font-size: .75em;
+  font-weight: 300;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.logo {
+  width: 5em;
+}
+
+
+
+/*****************************
+NAVIGATION
+*****************************/
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+nav li {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  list-style: none;
+  flex: 1 25%;
+}
+
+
+
+/*****************************
+PSUEDO-CLASSES for links
+*****************************/
+
+a:link {
+  color: #a400ff;
+}
+
+a:visited {
+  color: #ff82dd;
+}
+
+.selected {
+  border: 2px solid #a400ff;
+  padding: 3px;
+}
+
+a:hover {
+  color: #d425e8;
+}
+
+
+
+/*****************************
+MAIN
+*****************************/
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.main-nav,
+.intro,
+.contact,
+.main-content {
+  border-bottom: 2px solid #d425e8;
+}
+
+.intro,
+.gallery,
+.order,
+.menu,
+.cake-menu,
+.about,
+.contact {
+  padding: 5px 10px;
+}
+
+.intro,
+.gallery,
+.menu,
+.cake-menu {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.gallery img {
+  width: 10em;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.gallery li,
+#secondary li {
+  list-style: none;
+}
+
+.cupcakes,
+.cookies,
+.bars,
+.cakeballs,
+.tarts,
+.cakes {
+  position: relative;
+  margin-top: 20px;
+}
+
+#cupcakes,
+#cookies,
+#bars,
+#cakeballs,
+#tarts,
+#cakes {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+
+
+
+/*****************************
+FOOTER
+*****************************/
+
+.main-footer {
+  padding: 10px;
+  border-top: 10px solid #d425e8;
+  text-align: center;
+  line-height: .75em;
+  font-size: .75rem;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+
+
+/*****************************
+PAGE: MENU
+*****************************/
+
+.menu {
+  text-align: left;
+}
+
+.menu ul {
+  padding-left: 0;
+  margin-left: 0;
+  line-height: 1em;
+}
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4,
+.menu-5,
+.menu-6 {
+  display: inline-block;
+  padding: .5em;
+  border-radius: .125em;
+  box-shadow: 0 0 .65em rgba(0,0,0, .5);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.price {
+  text-decoration: underline;
+  font-size: 1.125rem;
+  margin-top: .65rem;
+  margin-bottom: .25rem;
+}
+
+.menu span:nth-child(n+2) {
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.menu span + p {
+  display: inline;
+}
+
+
+
+/*****************************
+PAGE: ABOUT & CONTACT
+*****************************/
+
+.about p:first-of-type:first-line,
+.contact p:first-of-type:first-line {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+
+
+/*****************************
+RESPONSIVE
+*****************************/
+
+@media screen and (min-width: 25em) {
+  .gallery img {
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .headline {
+    flex: none;
+    position: relative;
+    text-align: right;
+    padding: .65em;
+  }
+  
+  .logo {
+    flex: none;
+    position: absolute;
+    top: .65em;
+    left: .65em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .tagline {
+    font-size: 1.25em;
+  }
+  
+  .main-nav {
+    width: 40%;
+    float: right;
+    margin: 0;
+    padding: 0 2.5em 0 0;
+  }
+  
+  h3 {
+    text-align: left;
+  }
+  
+  .main-content {
+    width: 60%;
+    float: left;
+  }
+   
+  .intro {
+    padding: .6em 1.25em;
+  }
+
+  .order {
+    width: 40%;
+    float: right;
+    margin: .6em 0;
+    padding: 1.25em;
+  }
+  
+  .main-footer {
+    clear: both;  
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}  
+
+@media screen and (min-width: 65em) {
+  
+  .headline {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .tagline {
+    font-size: 1.75rem;
+  }
+  
+  .logo {
+    width: 8.5rem;
+  }
+   
+  h3 {
+    font-size: 1.75rem; 
+  }
+  
+  .main-nav,
+  .order {
+    width: 30%;
+  }
+  
+  .main-content {
+    width: 70%;
+  }
+  
+  .intro,
+  .order,
+  .menu,
+  .about,
+  .contact {
+    font-size: 1.25rem;
+  }
+  
+  .gallery li,
+  #primary,
+  #secondary {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .gallery li:nth-child(2n+3) {
+    clear: left;
+    margin: 2.5%;
+  }
+  
+    #cupcakes,
+    #cookies,
+    #bars,
+    #cakeballs,
+    #tarts,
+    #cakes {
+      font-size: 1rem;  
+    }
+  
+  .main-footer {
+    font-size: 1.25rem;
+    justify-content: space-around;
+  }
+
+  .menu-1,
+  .menu-2,
+  .menu-3,
+  .menu-4,
+  .menu-5,
+  .menu-6 {
+    font-size: 1.75rem;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+  }
+  
+  
+} 
+
+
+  
+@media screen and (min-width: 90em) {
+    h1 {
+      font-size: 4rem;
+    }
+  
+    .tagline {
+      font-size: 2rem;
+    }
+    
+    .logo {
+      width: 10rem;
+    }
+  
+    nav ul {
+      flex-direction: row;
+    }
+    
+    .gallery ul {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+    }
+    
+    .gallery li {
+      width: auto;
+    }
+  
+    .order {
+      padding-right: 1.25rem;
+    }
+}
+      
